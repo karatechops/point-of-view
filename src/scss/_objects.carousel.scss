@@ -1,0 +1,142 @@
+$padding: 30px;
+
+@mixin carousel-reveal-prev($duration, $delay) {
+  -webkit-animation-name: slide-from-left;
+  -webkit-animation-duration: $duration;
+  -webkit-animation-delay: $delay;
+  animation-name: slide-from-left;
+  animation-duration: $duration;
+  animation-delay: $delay;
+}
+
+@mixin carousel-reveal-next($duration, $delay) {
+  -webkit-animation-name: slide-from-right;
+  -webkit-animation-duration: $duration;
+  -webkit-animation-delay: $delay;
+  animation-name: slide-from-right;
+  animation-duration: $duration;
+  animation-delay: $delay;
+}
+
+@keyframes slide-from-right {
+  0% {
+  	-webkit-transform: translateX(calc(100%)) translateY(-50%);
+  	transform: translateX(calc(100%)) translateY(-50%);
+  }
+
+  100% {
+  	-webkit-transform: translateX(0%) translateY(-50%);
+  	transform: translateX(0%) translateY(-50%);
+  }
+}
+
+@keyframes slide-from-left {
+  0% {
+  	-webkit-transform: translateX(-100%) translateY(-50%);
+  	transform: translateX(-100%) translateY(-50%);
+  }
+
+  100% {
+  	-webkit-transform: translateX(0%) translateY(-50%);
+  	transform: translateX(0%) translateY(-50%);
+  }
+}
+
+.grommetux-carousel {
+	width: 100%;
+	overflow: hidden;
+	overflow-y: visible;
+	padding-bottom: 30px;
+
+	.grommetux-carousel__controls {
+		// Push dot nav below illustration.
+		// Remove for commit
+		//bottom: -28px;
+		z-index: 3;
+	}
+
+	.grommetux-carousel__control {
+		stroke: nth($brand-accent-colors, 1);
+		stroke-width: 2px;
+		-webkit-filter: none;
+		filter: none;
+		height: 23px;
+		width: 23px;
+	}
+
+	.grommetux-carousel__item {
+		overflow: visible;
+	}
+
+	.grommetux-carousel__control--active {
+    stroke: nth($brand-accent-colors, 1);
+    fill: nth($brand-accent-colors, 1);
+	}
+
+	.grommetux-button__icon {
+		padding: 8px;
+	}
+
+	.grommetux-control-icon--large {
+		width: 40px;
+		height: 40px;
+	}
+
+	.grommetux-carousel__arrow {
+		//background: $brand-color;
+		z-index: 5;
+		@media(max-width: 45em) { display: none; }
+
+		.grommetux-control-icon {
+	    width: 25px;
+    	height: 25px;
+			transition: all 0.3s;
+    	-webkit-filter: none;
+
+    	polyline { stroke: rgba(118, 118, 118, 1); }
+		}
+
+		&.grommetux-carousel__arrow--next {
+			padding-right: $padding;
+			@include carousel-reveal-next(0.3s, 0s);
+		}
+
+		&.grommetux-carousel__arrow--prev {
+			padding-left: $padding;
+			@include carousel-reveal-prev(0.3s, 0s);
+		}
+	}
+
+	.grommetux-carousel__arrow--next:hover .button__icon svg {
+		transform: translateX(3px);
+	}
+
+	.grommetux-carousel__arrow--prev:hover .button__icon svg {
+		transform: translateX(-3px);
+	}
+
+	.grommetux-carousel__track {
+		transition: margin-left 0.8s;
+
+		.grommetux-tiles--flush {
+			overflow-y: visible;
+
+			.grommetux-box { overflow-y: visible; }
+		}
+	}
+
+@media(min-width: 45em) {
+		.grommetux-carousel__arrow .grommetux-control-icon {
+			width: 34px;
+			height: 34px;
+		}
+
+		.grommetux-control-icon-previous {
+			padding-right: 3px;
+		}
+
+		.grommetux-control-icon-next {
+			padding-left: 3px;
+		}
+	}
+}

@@ -1,0 +1,31 @@
+// (C) Copyright 2014-2015 Hewlett Packard Enterprise Development LP
+
+@import 'grommet/scss/hpe/index';
+
+$base-padding: 24px;
+
+@import 'objects.progress';
+@import 'objects.hotspot';
+@import 'objects.carousel';
+@import 'objects.layer';
+@import 'nav';
+@import 'scenes';
+
+.grommetux-headline {
+	width: 100%;
+	padding-left: $base-padding;
+	padding-right: $base-padding;
+	max-width: 980px;
+	// Fix Chrome opacity animation bug by
+	// translating Z.
+	transform: translateZ(0);
+
+	&.grommetux-headline--small {
+		line-height: 1.1;
+	}
+}
+
+.grommetux-box__container {
+  padding-left: 0;
+  padding-right: 0;
+}

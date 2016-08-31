@@ -1,0 +1,10 @@
+.hotspot {
+	display: inline-block;
+	position: relative;
+
+	.hotspot__container {
+		position: absolute;
+		transform: translateX(-50%) translateY(-50%);
+		z-index: 2;
+	}
+}
