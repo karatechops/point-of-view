@@ -18,7 +18,7 @@
   	overflow: hidden;
     padding-top: 0;
 
-  	@media(min-width:1109px) {
+  	@media(min-width: 1109px) {
   		overflow: visible;
   	}
 
@@ -254,7 +254,7 @@
 		}
 	}
 
-	@media(min-width:501px) {
+	@media(min-width: 501px) {
 		.grommetux-headline {
 			text-align: center;
 		}

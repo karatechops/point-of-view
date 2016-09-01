@@ -84,15 +84,11 @@
 
 @media screen and (min-width: 45em) {
   .grommet.grommetux-layer.grommetux-layer--align-center:not(.grommetux-layer--hidden) .grommetux-layer__container {
-    .grommetux-headline--large { font-size: 3rem; }
-  }
-}
-
-@media screen and (min-width: 45em) {
-  .grommet.grommetux-layer.grommetux-layer--align-center:not(.grommetux-layer--hidden) .grommetux-layer__container {
     width: 100vw;
     max-width: 100vw;
     height: 100vh;
     max-height: 100vh;
+
+    .grommetux-headline--large { font-size: 3rem; }
   }
 }

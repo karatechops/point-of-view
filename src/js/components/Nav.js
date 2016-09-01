@@ -98,5 +98,4 @@ export default class Nav extends Component {
 
 Nav.propTypes = {
   progress: PropTypes.number
-}
-
+};

@@ -40,7 +40,7 @@ export default class SectionContainer extends Component {
     return (
       <Section {...this.props}
         appCentered={true} justify="center" align="center" full={true}
-        textCentered={true} pad={{vertical: "large"}}>
+        pad={{vertical: "large"}}>
         {children}
       </Section>
     );
