@@ -29,7 +29,8 @@ class Home extends React.Component {
 
   render() {
     return (
-      <Article className="home" onProgress={this._onProgress} scrollStep={false} controls={false}>
+      <Article className="home" onProgress={this._onProgress} 
+        scrollStep={false} controls={false}>
         <Nav progress={this.state.progress}/>
         <AnimatedSection primary={true} colorIndex={"light-1"} >
           <Animation1 />
@@ -65,7 +66,6 @@ class Home extends React.Component {
       </Article>
     );
   }
-
 };
 
 export default Home;

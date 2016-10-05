@@ -48,33 +48,39 @@ export default class Nav extends Component {
       }
     );
 
-    const icon = <Share className={`${CLASS_ROOT}__icon`} colorIndex={"dark-2"} />;
+    const icon = 
+      <Share className={`${CLASS_ROOT}__icon`} colorIndex={"dark-2"} />;
 
     const navCta = (this.props.progress >= 95)
-      ? (<Anchor label={'Share'} icon={icon} reverse={true} onClick={this._onClick} />)
-      : ('');
+      ? <Anchor label={'Share'} icon={icon} reverse={true} 
+          onClick={this._onClick} />
+      : undefined;
 
     const layer = (this.state.layerActive) ? (
       <div className="share-layer">
-        <Layer onClose={this._onLayerClose} closer={true} flush={true} align={"center"}>
+        <Layer onClose={this._onLayerClose} closer={true} flush={true} 
+          align={"center"}>
           <div className="share">
             <Headline size={"large"} strong={true}>
               Thanks for sharing, we're glad you enjoyed it.
             </Headline>
             <div className="share__icons">
-              <SocialShare type={"email"} 
-              link={"http://intelligent-venues.grommet.io/"} 
-              title={"Hewlett Packard Enterprise - Intelligent Venues"} 
-              text="HPE is helping stadiums, theme parks and cultural institutions turn visitors into uber fans." />
-              <SocialShare type={"twitter"} 
-              link={"http://intelligent-venues.grommet.io/"} 
-              text={"@HPE is helping stadiums, theme parks and cultural institutions turn visitors into uber fans."} />
-              <SocialShare type={"facebook"} 
-              link={"http://intelligent-venues.grommet.io/"} />
-              <SocialShare type={"linkedin"} 
-              link={"http://intelligent-venues.grommet.io/"} 
-              title={"Hewlett Packard Enterprise - Intelligent Venues"}
-              text="HPE is helping stadiums, theme parks and cultural institutions turn visitors into uber fans." />
+              <SocialShare type="email"
+              link="http://intelligent-venues.grommet.io/"
+              title="Hewlett Packard Enterprise - Intelligent Venues"
+              text="HPE is helping stadiums, theme parks and cultural 
+                institutions turn visitors into uber fans." />
+              <SocialShare type="twitter"
+              link="http://intelligent-venues.grommet.io/"
+              text="@HPE is helping stadiums, theme parks and cultural 
+                institutions turn visitors into uber fans." />
+              <SocialShare type="facebook"
+              link="http://intelligent-venues.grommet.io/" />
+              <SocialShare type="linkedin"
+              link="http://intelligent-venues.grommet.io/"
+              title="Hewlett Packard Enterprise - Intelligent Venues"
+              text="HPE is helping stadiums, theme parks and cultural 
+                institutions turn visitors into uber fans." />
             </div>
           </div>
         </Layer>

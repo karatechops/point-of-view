@@ -18,9 +18,11 @@ function anim({target}) {
   return new TimelineMax({paused: true})
     .set([text, header, bell, arrow], {opacity:'0'})
     .set(truck, {opacity:'1'})
-    .set(dottedLine, {opacity:'0', x:'2%', scaleY:'0', transformOrigin: 'center center'})
+    .set(dottedLine, {opacity:'0', x:'2%', scaleY:'0', 
+      transformOrigin: 'center center'})
     .set([bell], {opacity:'0', x:'2%'})
-    .set(buildings, {scale:'1.8', opacity:'1', x:'0%', transformOrigin: 'left bottom'})
+    .set(buildings, {scale:'1.8', opacity:'1', x:'0%', 
+      transformOrigin: 'left bottom'})
     .set(truck, {x:'-200'})
 
     .to(header, .5, {opacity:'1', delay:'.2'})
@@ -52,7 +54,7 @@ class Animation2 extends Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    let percentScrolled = this.props.percentScrolled;
+    const percentScrolled = this.props.percentScrolled;
     if (percentScrolled >= 0 && percentScrolled <= 100) {
       this.anim.progress(percentScrolled/100);
     }
@@ -61,23 +63,34 @@ class Animation2 extends Component {
   render() {
     return (
       <div className={CLASS_ROOT}>
-        <Headline name="header" size="large" strong={true}>Seamless navigation from front door to seat</Headline>
+        <Headline name="header" size="large" strong={true}>Seamless navigation 
+          from front door to seat</Headline>
         
         <Carousel autoplay={false} infinite={false} name="container">
           <div className={`${CLASS_ROOT}__carousel-item`}>
-            <Headline size="small" name="text1">Turn-by-turn navigation and notifications provide your patrons with directions and up-to-date traffic and event information.</Headline>
-            <div className={`${CLASS_ROOT}__sub-container`} style={{width: '100%', maxWidth: '565px', alignItems:'center'}} name="container">
-              <div style={{width:'100%'}} className={`${CLASS_ROOT}__scene-item`}>
-                <img style={{width:'100%', zIndex:'2'}} className={`${CLASS_ROOT}__scene-item-stacked`} 
+            <Headline size="small" name="text1">Turn-by-turn navigation and 
+              notifications provide your patrons with directions and up-to-date
+              traffic and event information.</Headline>
+            <div className={`${CLASS_ROOT}__sub-container`} 
+              style={{width: '100%', maxWidth: '565px', alignItems:'center'}} 
+              name="container">
+              <div style={{width:'100%'}} 
+                className={`${CLASS_ROOT}__scene-item`}>
+                <img style={{width:'100%', zIndex:'2'}} 
+                  className={`${CLASS_ROOT}__scene-item-stacked`} 
                   name="truck" src="/img/slide2/truck.svg" />
 
-                <img style={{width:'100%'}} className={`${CLASS_ROOT}__scene-item-stacked`} 
+                <img style={{width:'100%'}} 
+                  className={`${CLASS_ROOT}__scene-item-stacked`} 
                   name="dottedLine" src="/img/slide2/dotted-line.svg" />
 
-                <img style={{width:'100%'}} className={`${CLASS_ROOT}__scene-item-stacked`} 
+                <img style={{width:'100%'}} 
+                  className={`${CLASS_ROOT}__scene-item-stacked`} 
                   name="bell" src="/img/slide2/bell.svg" />
 
-                <img style={{width:'100%'}} className={`${CLASS_ROOT}__scene-item-stacked`} 
+
+                <img style={{width:'100%'}} 
+                  className={`${CLASS_ROOT}__scene-item-stacked`} 
                   name="arrow" src="/img/slide2/arrow.svg" />
 
                 <img style={{width:'100%'}} 
@@ -86,9 +99,13 @@ class Animation2 extends Component {
             </div>
           </div>
           <div className={`${CLASS_ROOT}__carousel-item`}>
-            <Headline size="small">Outdoor navigation helps your patrons quickly find available spots within venue parking options.</Headline>
-            <div className={`${CLASS_ROOT}__sub-container`} style={{width: '100%', maxWidth: '565px', alignItems:'center'}}>
-              <div style={{width:'100%'}} className={`${CLASS_ROOT}__scene-item`}>
+            <Headline size="small">Outdoor navigation helps your patrons 
+              quickly find available spots within venue parking options.
+            </Headline>
+            <div className={`${CLASS_ROOT}__sub-container`} 
+              style={{width: '100%', maxWidth: '565px', alignItems:'center'}}>
+              <div style={{width:'100%'}} 
+                className={`${CLASS_ROOT}__scene-item`}>
                 <img style={{width:'100%'}} src="/img/slide2/full2.svg" />
               </div>
             </div>

@@ -47,16 +47,26 @@ class Animation6 extends Component {
   render() {
     return (
       <div className={CLASS_ROOT}>
-        <Headline name="header" size="large" strong={true}>Rich content enhances the visitor experience</Headline>
+        <Headline name="header" size="large" strong={true}>
+          Rich content enhances the visitor experience
+        </Headline>
         
         <Carousel autoplay={false} infinite={false} name="container">
           <div className={`${CLASS_ROOT}__carousel-item`}>
-            <Headline size="small">Instant replays are available to fans just seconds after the live action occurs.</Headline>
-            <img style={{width:'100%', maxWidth: '450px'}} src="/img/slide6/full1.svg" />
+            <Headline size="small">
+              Instant replays are available to fans just seconds after the 
+              live action occurs.
+            </Headline>
+            <img style={{width:'100%', maxWidth: '450px'}} 
+              src="/img/slide6/full1.svg" />
           </div>
           <div className={`${CLASS_ROOT}__carousel-item`}>
-            <Headline size="small">Self-guided tours, augmented reality and digital content make exhibits more immersive and bring them to life for patrons.</Headline>
-            <img style={{width:'100%', maxWidth: '450px'}} src="/img/slide6/full3.svg" />
+            <Headline size="small">
+              Self-guided tours, augmented reality and digital content make
+              exhibits more immersive and bring them to life for patrons.
+            </Headline>
+            <img style={{width:'100%', maxWidth: '450px'}} 
+              src="/img/slide6/full3.svg" />
           </div>
         </Carousel>
       </div>

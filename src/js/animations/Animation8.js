@@ -28,7 +28,7 @@ function anim({target}) {
     .add('leave');
 }
 
-class Animation1 extends Component {
+class Animation8 extends Component {
   constructor(props) {
     super(props);
 
@@ -70,11 +70,17 @@ class Animation1 extends Component {
     return (
       <div className={classes}>
         <div style={{maxWidth:'780px'}}>
-          <Headline name="header" size="large" strong={true}>Transformation journey to Intelligent Venues</Headline>
+          <Headline name="header" size="large" strong={true}>
+            Transformation journey to Intelligent Venues
+          </Headline>
         </div>
-        <Headline name="text1" size="small">Learn more about how HPE is helping venues accelerate digital transformation.</Headline>
+        <Headline name="text1" size="small">
+          Learn more about how HPE is helping venues accelerate 
+          digital transformation.
+        </Headline>
         <div name="cta" className={`${CLASS_ROOT}__button-cta`}>
-          <Button href="http://www.hpe.com/solutions/enable" label="Learn more" primary={true} />
+          <Button href="http://www.hpe.com/solutions/enable" 
+            label="Learn more" primary={true} />
         </div>
         <EndButton onClick={this._scrollBackHandler}/>
       </div>
@@ -82,8 +88,8 @@ class Animation1 extends Component {
   }
 };
 
-export default GSAP()(Animation1);
+export default GSAP()(Animation8);
 
-Animation1.PropTypes = {
+Animation8.PropTypes = {
   percentScrolled: PropTypes.number.isRequired
 };

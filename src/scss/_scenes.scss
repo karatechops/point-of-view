@@ -22,12 +22,7 @@
   		overflow: visible;
   	}
 
-		.grommetux-headline--small {
-			margin-bottom: 5px;
-		}
-
   	.grommetux-headline.grommetux-headline--large {
-  		font-size: 5.2rem;
       padding: 30px;
       margin: 0 24px 24px;
       border: 8px solid #2AD2C9;
@@ -36,16 +31,7 @@
       @include media-query(lap-and-up) {
         width: auto;
       }
-
-  		@media(max-width: 900px) {
-  			font-size: 4.6rem;
-  		}
-
-  		@media(max-height: 650px), (max-width: 45em) {
-  			font-size: 2.6rem;
-  			padding: 10px 10px 13px;
-  		}
-  	}
+    }
 
 		.animation__sub-container {
 	    margin-bottom: 20px;
@@ -201,7 +187,7 @@
 		}
 	}
 
-	// Max-height is specified for IE SVG rendering. IE =(
+	// Max-height is specified for IE SVG rendering.
 	.animation__container {
 		position: relative;
     height: 30vh;

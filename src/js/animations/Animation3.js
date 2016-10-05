@@ -51,21 +51,32 @@ class Animation3 extends Component {
   render() {
     let hotspotContent = (
       <div>
-        <Headline size="large" strong={true}>Advanced Wi-Fi, paired with Aruba Beacons, provide indoor wayfinding throughout the venue with pinpoint accuracy.</Headline>
+        <Headline size="large" strong={true}>
+          Advanced Wi-Fi, paired with Aruba Beacons, provide indoor 
+          wayfinding throughout the venue with pinpoint accuracy.
+        </Headline>
         <img src="/img/slide3/hotspot-content.svg" />
       </div>
     );
     return (
       <div className={CLASS_ROOT}>
-        <Headline name="header" size="large" strong={true}>Bludot wayfinding provides unparalleled indoor way-finding accuracy</Headline>
-        <Headline name="text1" size="small">Step-by-step directions make it easy for patrons to find their seats and amenities.</Headline>
-          <div className={`${CLASS_ROOT}__sub-container`} style={{width: '100%'}} name={"container"}>
-            <div style={{width: '100%'}} className={`${CLASS_ROOT}__scene-item`}>
-              <Hotspot style={{width: '100%'}} content={hotspotContent} name="hotspot" top={'10%'} left={'50%'}>
-                <img style={{height: 'auto', width: '100%'}} src="/img/slide3/crowd.svg" />
-              </Hotspot>
-            </div>
+        <Headline name="header" size="large" strong={true}>
+          Bludot wayfinding provides unparalleled indoor way-finding accuracy
+        </Headline>
+        <Headline name="text1" size="small">
+          Step-by-step directions make it easy for patrons to 
+          find their seats and amenities.
+        </Headline>
+        <div className={`${CLASS_ROOT}__sub-container`} style={{width: '100%'}} 
+          name={"container"}>
+          <div style={{width: '100%'}} className={`${CLASS_ROOT}__scene-item`}>
+            <Hotspot style={{width: '100%'}} content={hotspotContent} 
+              name="hotspot" top={'10%'} left={'50%'}>
+              <img style={{height: 'auto', width: '100%'}} 
+                src="/img/slide3/crowd.svg" />
+            </Hotspot>
           </div>
+        </div>
       </div>
     );
   }

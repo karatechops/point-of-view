@@ -22,8 +22,9 @@ export default class Hotspot extends Component {
   render() {
     const layer = (this.state.layerActive) ? (
       <div className="hotspot-layer">
-        <Layer onClose={this._onClick} closer={true} flush={true} align={"center"}>
-        {this.props.content}
+        <Layer onClose={this._onClick} closer={true} flush={true} 
+          align={"center"}>
+          {this.props.content}
         </Layer>
       </div>
     ) : (null);
@@ -32,7 +33,8 @@ export default class Hotspot extends Component {
       <div className={CLASS_ROOT} style={this.props.style}>
         <div className={`${CLASS_ROOT}__container`} 
           style={{top: this.props.top, left: this.props.left}}>
-          <Button plain={true} onClick={this._onClick} className={`${CLASS_ROOT}__icon-container`}>
+          <Button plain={true} onClick={this._onClick} 
+            className={`${CLASS_ROOT}__icon-container`}>
             <Pulse />
           </Button>
           {layer}

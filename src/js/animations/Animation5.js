@@ -20,7 +20,8 @@ function anim({target}) {
   const person4 = target.find({name: 'person4'});
 
   return new TimelineMax({paused: true})
-    .set(personMain, {scale: '1.6', y:'-100%', opacity: '0', transformOrigin: 'bottom center'})
+    .set(personMain, {scale: '1.6', y:'-100%', opacity: '0', 
+      transformOrigin: 'bottom center'})
     .set(person1, {x:'-200%'})
     .set(person2, {x:'-100%'})
     .set(person3, {x:'100%'})
@@ -33,7 +34,8 @@ function anim({target}) {
     
     .add('intro', .65)
     .to(personMain, 1.3, {opacity:'1', y:'0%', scale:'1', delay:'-.2'}, "intro")
-    .to([person1, person2, person3, person4], .4, {opacity:'0', y:'10%', delay:'.35'}, "intro")
+    .to([person1, person2, person3, person4], .4, 
+      {opacity:'0', y:'10%', delay:'.35'}, "intro")
     .to([bubble1, bubble2], .3, {opacity:'1', scale:'1', delay:'.4'}, "intro")
     .to([hotspot1, hotspot2], .3, {opacity:'1', delay:'.5'}, "intro")
     .to(text1, 1, {opacity:'1', delay:'.12'}, "intro")
@@ -57,7 +59,7 @@ class Animation5 extends Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    let percentScrolled = this.props.percentScrolled;
+    const percentScrolled = this.props.percentScrolled;
     if (percentScrolled >= 0 && percentScrolled <= 99 ) {
       this.anim.progress(percentScrolled/100);
     }
@@ -66,24 +68,37 @@ class Animation5 extends Component {
   render() {
     let hotspotContent = (
       <div>
-        <Headline size="large" strong={true}>Food and beverages can be delivered directly to patrons’ seats via mobile ordering and mobile payment.</Headline>
+        <Headline size="large" strong={true}>
+          Food and beverages can be delivered directly to patrons’ seats 
+          via mobile ordering and mobile payment.
+        </Headline>
         <img src="/img/slide5/food.svg" />
       </div>
     );
 
     let hotspot2Content = (
       <div>
-        <Headline size="large">With Aruba Beacons, you can deliver personalized, location-based customer loyalty and proximity marketing offers to patrons.</Headline>
+        <Headline size="large">
+          With Aruba Beacons, you can deliver personalized, location-based 
+          customer loyalty and proximity marketing offers to patrons.
+        </Headline>
         <img src="/img/slide5/ticket.svg" />
       </div>
     );
 
     return (
       <div className={CLASS_ROOT}>
-        <Headline name="header" size="large" strong={true}>Fans order from their seats and never miss a beat</Headline>
-        <Headline name="text1" size="small">Proximity marketing, mobile ordering and mobile payment let visitors take advantage of amenities without missing the action.</Headline>
-        <div className={`${CLASS_ROOT}__container`} style={{maxWidth: '470px'}} name="container">
-          <Hotspot style={{zIndex:'2'}} content={hotspotContent} name="hotspot1" top={"60%"}>
+        <Headline name="header" size="large" strong={true}>
+          Fans order from their seats and never miss a beat
+        </Headline>
+        <Headline name="text1" size="small">
+          Proximity marketing, mobile ordering and mobile payment let visitors 
+          take advantage of amenities without missing the action.
+        </Headline>
+        <div className={`${CLASS_ROOT}__container`} style={{maxWidth: '470px'}} 
+          name="container">
+          <Hotspot style={{zIndex:'2'}} content={hotspotContent} 
+            name="hotspot1" top={"60%"}>
             <div className={`${CLASS_ROOT}__sub-container`} name="bubble1">
               <div className={`${CLASS_ROOT}__scene-item`}>
                 <img src="/img/slide5/bubble-1.svg" />
@@ -93,16 +108,26 @@ class Animation5 extends Component {
 
           <div className={`${CLASS_ROOT}__sub-container`} name="personMain">
             <div className={`${CLASS_ROOT}__scene-item`}>
-              <img className={`${CLASS_ROOT}__scene-item-stacked`} src="/img/slide5/pin.svg" />
-              <img name="person1" className={`${CLASS_ROOT}__scene-item-stacked`} src="/img/slide5/person.svg" />
-              <img name="person2" className={`${CLASS_ROOT}__scene-item-stacked`} src="/img/slide5/person.svg" />
-              <img name="person3" className={`${CLASS_ROOT}__scene-item-stacked`} src="/img/slide5/person.svg" />
-              <img name="person4" className={`${CLASS_ROOT}__scene-item-stacked`} src="/img/slide5/person.svg" />
+              <img className={`${CLASS_ROOT}__scene-item-stacked`} 
+                src="/img/slide5/pin.svg" />
+              <img name="person1" 
+                className={`${CLASS_ROOT}__scene-item-stacked`} 
+                src="/img/slide5/person.svg" />
+              <img name="person2" 
+                className={`${CLASS_ROOT}__scene-item-stacked`} 
+                src="/img/slide5/person.svg" />
+              <img name="person3" 
+                className={`${CLASS_ROOT}__scene-item-stacked`} 
+                src="/img/slide5/person.svg" />
+              <img name="person4" 
+                className={`${CLASS_ROOT}__scene-item-stacked`} 
+                src="/img/slide5/person.svg" />
               <img src="/img/slide5/person.svg" />
             </div>
           </div>
 
-          <Hotspot style={{zIndex:'2'}} content={hotspot2Content} name="hotspot2" top={'33%'} left={'75%'}>
+          <Hotspot style={{zIndex:'2'}} content={hotspot2Content} 
+            name="hotspot2" top={'33%'} left={'75%'}>
             <div className={`${CLASS_ROOT}__sub-container`} name={"bubble2"}>
               <div className={`${CLASS_ROOT}__scene-item`}>
                 <img src="/img/slide5/bubble-2.svg" />

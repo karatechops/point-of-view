@@ -47,16 +47,26 @@ class Animation7 extends Component {
   render() {
     return (
       <div className={CLASS_ROOT}>
-        <Headline name="header" size="large" strong={true}>Advanced analytics optimize the customer experience. </Headline>
+        <Headline name="header" size="large" strong={true}>
+          Advanced analytics optimize the customer experience.
+        </Headline>
         
         <Carousel autoplay={false} infinite={false} name="container">
           <div className={`${CLASS_ROOT}__carousel-item`}>
-            <Headline size="small">Our advanced analytics engine allows you to focus resources where patrons gather, and improve underutilized spaces.</Headline>
-            <img style={{width:'100%', maxWidth: '450px'}} src="/img/slide7/full1.svg" />
+            <Headline size="small">
+              Our advanced analytics engine allows you to focus resources 
+              where patrons gather, and improve underutilized spaces.
+            </Headline>
+            <img style={{width:'100%', maxWidth: '450px'}} 
+              src="/img/slide7/full1.svg" />
           </div>
           <div className={`${CLASS_ROOT}__carousel-item`}>
-            <Headline size="small">Customer analytics and location-based services help you personalize the visitor experience and increase engagement.</Headline>
-            <img style={{width:'100%', maxWidth: '450px'}} src="/img/slide7/full2.svg" />
+            <Headline size="small">
+              Customer analytics and location-based services help you
+              personalize the visitor experience and increase engagement.
+            </Headline>
+            <img style={{width:'100%', maxWidth: '450px'}} 
+              src="/img/slide7/full2.svg" />
           </div>
         </Carousel>
       </div>

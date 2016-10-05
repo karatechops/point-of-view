@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 // GSAP's animation engine core does not export correctly
-// it is directly called it from the lib to avoid this.
+// it is directly called in from the lib to avoid this.
 import '../../lib/gsap/TimelineMax';
 import '../../lib/gsap/TweenMax';
 import '../../lib/gsap/plugins/DrawSVGPlugin';
@@ -50,11 +50,20 @@ class Animation1 extends Component {
 
     return (
       <div className={classes}>
-        <Headline name="header" size="large" strong={true}>Intelligent Venues redefine the customer experience</Headline>
-        <Headline name="text1" size="small">HPE offers contextually-aware technologies that help stadiums and cultural institutions create world-class experiences that turn visitors into uber fans.</Headline>
+        <Headline name="header" size="large" strong={true}>
+          Intelligent Venues redefine the customer experience
+        </Headline>
+        <Headline name="text1" size="small">
+          HPE offers contextually-aware technologies that help stadiums and 
+          cultural institutions create world-class experiences that turn 
+          visitors into uber fans.
+        </Headline>
         
-        <div className={`${CLASS_ROOT}__sub-container`} style={{width: '115%', maxWidth:'1127px', height:'auto'}} name="container">
-          <div className={`${CLASS_ROOT}__scene-item`} style={{width: '100%', transform:'translateZ(0)'}}>
+        <div className={`${CLASS_ROOT}__sub-container`} 
+          style={{width: '115%', maxWidth:'1127px', height:'auto'}} 
+          name="container">
+          <div className={`${CLASS_ROOT}__scene-item`} 
+            style={{width: '100%', transform:'translateZ(0)'}}>
             <Intro />
           </div>
         </div>

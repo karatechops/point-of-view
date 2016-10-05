@@ -17,7 +17,8 @@ function anim({target}) {
   const hotspot = target.find({name: 'hotspot'});
   
   return new TimelineMax({paused: true})
-    .set(entrance, {opacity:'0', y:'-50%', scale:'1.1', transformOrigin:'bottom right'})
+    .set(entrance, {opacity:'0', y:'-50%', scale:'1.1', 
+      transformOrigin:'bottom right'})
     .set([hotspot, header, text1], {opacity: '0'})
     .set([person1, person2, person3, person4 ], {opacity: '0', x:'-50%'})
     
@@ -63,23 +64,41 @@ class Animation4 extends Component {
   render() {
     let hotspotContent = (
       <div>
-        <Headline size="large" strong={true}>Seat upgrade offers can be delivered to customers as they enter the venue.</Headline>
+        <Headline size="large" strong={true}>
+          Seat upgrade offers can be delivered to 
+          customers as they enter the venue.
+        </Headline>
         <img src="/img/slide4/hotspot-image.svg" />
       </div>
     );
 
     return (
       <div className={CLASS_ROOT}>
-        <Headline name="header" size="large" strong={true}>Ticketless entry via mobile device</Headline>
-        <Headline name="text1"  size="small">Mobile ticketing can help reduce lines and provide hassle-free entry.</Headline>
-        <div className={`${CLASS_ROOT}__sub-container`} style={{width: '100%', height:'auto'}} name={"container"}>
+        <Headline name="header" size="large" strong={true}>
+          Ticketless entry via mobile device
+        </Headline>
+        <Headline name="text1"  size="small">
+          Mobile ticketing can help reduce lines and provide hassle-free entry.
+        </Headline>
+        <div className={`${CLASS_ROOT}__sub-container`} 
+          style={{width: '100%', height:'auto'}} name={"container"}>
           <div className={`${CLASS_ROOT}__scene-item`} style={{width: '100%'}}>
-            <img style={{width:'100%'}} className={`${CLASS_ROOT}__scene-item-stacked`} src="/img/slide4/entrance.svg" name="entrance" />
-            <img style={{width:'100%'}} className={`${CLASS_ROOT}__scene-item-stacked`} src="/img/slide4/person-4.svg" name="person-4" />
-            <img style={{width:'100%'}} className={`${CLASS_ROOT}__scene-item-stacked`} src="/img/slide4/person-3.svg" name="person-3" />
-            <img style={{width:'100%'}} className={`${CLASS_ROOT}__scene-item-stacked`} src="/img/slide4/person-2.svg" name="person-2" />
-            <Hotspot style={{width:'100%', height:'100%'}} content={hotspotContent} name="hotspot" top={"10%"} left={"40%"}>
-              <img style={{width:'100%'}} src="/img/slide4/person-1.svg" name={"person-1"} />
+            <img style={{width:'100%'}} 
+              className={`${CLASS_ROOT}__scene-item-stacked`} 
+              src="/img/slide4/entrance.svg" name="entrance" />
+            <img style={{width:'100%'}} 
+              className={`${CLASS_ROOT}__scene-item-stacked`} 
+              src="/img/slide4/person-4.svg" name="person-4" />
+            <img style={{width:'100%'}} 
+              className={`${CLASS_ROOT}__scene-item-stacked`} 
+              src="/img/slide4/person-3.svg" name="person-3" />
+            <img style={{width:'100%'}} 
+              className={`${CLASS_ROOT}__scene-item-stacked`} 
+              src="/img/slide4/person-2.svg" name="person-2" />
+            <Hotspot style={{width:'100%', height:'100%'}} 
+              content={hotspotContent} name="hotspot" top={"10%"} left={"40%"}>
+              <img style={{width:'100%'}} src="/img/slide4/person-1.svg" 
+                name={"person-1"} />
             </Hotspot>
           </div>
         </div>
