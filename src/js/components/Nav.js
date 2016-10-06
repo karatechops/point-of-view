@@ -80,7 +80,8 @@ export default class Nav extends Component {
     ) : undefined;
 
     return (
-      <Header className={classes} direction="column" pad={{between:"none"}}>
+      <Header className={classes} direction="column" pad={{between:"none"}}
+        align="start">
         {layer}
         <Box full="horizontal" direction="row" align="center" justify="between"
           responsive={false} colorIndex="light-1" pad="medium">
