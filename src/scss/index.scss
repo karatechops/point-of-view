@@ -29,3 +29,8 @@ $base-padding: 24px;
   padding-left: 0;
   padding-right: 0;
 }
+
+// Correct CaaS header's z-index
+.header {
+  position: relative;
+}
