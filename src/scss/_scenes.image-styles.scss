@@ -10,7 +10,7 @@
 
   .svg-stroke--green {
     fill: none;
-    stroke: #6A817C;
+    stroke: nth($brand-neutral-colors, 2);
     stroke-width: 3;
     stroke-miterlimit: 10;
   };
@@ -29,7 +29,7 @@
 
   .svg-stroke--orange {
     fill: none;
-    stroke: #F68D71;
+    stroke: nth($brand-accent-colors, 3);
     stroke-width: 3;
     stroke-miterlimit: 10;
   };
@@ -50,7 +50,7 @@
 
   .svg-stroke--accent {
     fill: none;
-    stroke: #56c5d0;
+    stroke: nth($brand-accent-colors, 1);
     stroke-width: 3;
     stroke-miterlimit: 10;
   };
