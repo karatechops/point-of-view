@@ -19,8 +19,10 @@ export default class ScrollMonitor extends React.Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    if (prevState.activeIndex !== this.state.activeIndex) this.props.setActiveIndex(this.state.activeIndex);
-    if (prevState.scrollPercent !== this.state.scrollPercent) this.props.setScrollPercent(this.state.scrollPercent);
+    if (prevState.activeIndex !== this.state.activeIndex) 
+      this.props.setActiveIndex(this.state.activeIndex);
+    if (prevState.scrollPercent !== this.state.scrollPercent) 
+      this.props.setScrollPercent(this.state.scrollPercent);
   }
 
   componentWillUnmount() {
@@ -63,9 +65,9 @@ export default class ScrollMonitor extends React.Component {
   }
 
   _isViewable(node) {
-    //let triggerOffset = window.innerHeight / 3;
     let triggerOffset = 0;
-    let nodeCenter = node.measure.top + (node.measure.height / 2) - triggerOffset;
+    let nodeCenter = node.measure.top + (node.measure.height / 2) 
+      - triggerOffset;
     let nodeBottom = node.measure.top + node.measure.height - triggerOffset;
     let windowCenter = window.pageYOffset + (window.innerHeight/2);
 

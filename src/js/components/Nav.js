@@ -3,6 +3,8 @@ import Logo from './Logo.js';
 import classnames from 'classnames';
 import Anchor from 'grommet/components/Anchor';
 import Layer from 'grommet/components/Layer';
+import Box from 'grommet/components/Box';
+import Header from 'grommet/components/Header';
 import Headline from 'grommet/components/Headline';
 import Share from 'grommet/components/icons/base/Share';
 import SocialShare from 'grommet/components/SocialShare';
@@ -37,23 +39,13 @@ export default class Nav extends Component {
       CLASS_ROOT,
       {
         [`${CLASS_ROOT}--active`]: 
-          this.props.progress >= 95 || this.props.progress <= 0
+          this.props.progress >= 95
       }
     );
-
-    const containerClasses = classnames(
-      `${CLASS_ROOT}__container`,
-      {
-        [`${CLASS_ROOT}__container--started`]: this.props.progress > 2
-      }
-    );
-
-    const icon = 
-      <Share className={`${CLASS_ROOT}__icon`} colorIndex={"dark-2"} />;
 
     const navCta = (this.props.progress >= 95)
-      ? <Anchor label={'Share'} icon={icon} reverse={true} 
-          onClick={this._onClick} />
+      ? <Anchor label={'Share'} icon={<Share />} reverse={true} 
+          onClick={this._onClick} primary={true} />
       : undefined;
 
     const layer = (this.state.layerActive) ? (
@@ -85,19 +77,18 @@ export default class Nav extends Component {
           </div>
         </Layer>
       </div>
-    ) : (null);
+    ) : undefined;
 
     return (
-      <nav className={classes}>
-      	<div className={containerClasses}>
-          <Logo />
-          <div className={`${CLASS_ROOT}__control`}>
-            {navCta}
-          </div>
-        </div>
-        <ProgressBar progress={this.props.progress}/>
+      <Header className={classes} direction="column" pad={{between:"none"}}>
         {layer}
-      </nav>
+        <Box full="horizontal" direction="row" align="center" justify="between"
+          responsive={false} colorIndex="light-1" pad="medium">
+          <Logo />
+          {navCta}
+        </Box>
+        <ProgressBar progress={this.props.progress}/>
+      </Header>
     );
   }
 };
