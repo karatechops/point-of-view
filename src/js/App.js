@@ -2,12 +2,13 @@
 
 import React from 'react';
 import GrommetApp from 'grommet/components/App';
+import Home from './components/Home';
 
 class App extends React.Component {
   render() {
     return (
       <GrommetApp centered={false} ref="app">
-        {this.props.children}
+        <Home />
       </GrommetApp>
     );
   }
