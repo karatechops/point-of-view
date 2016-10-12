@@ -30,21 +30,7 @@ $base-padding: 24px;
   padding-right: 0;
 }
 
-// Allows app to be flush with top of browser window.
-// This is to fix page scroll progress inconsistencies.
+// Fixes CaaS header z-index.
 .header {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
 }
-
-// Makes room for header.
-.grommetux-app {
-  padding-top: 60px;
-
-  @include media-query(lap-and-up) {
-    padding-top: 90px;
-  }
-}
-
-
